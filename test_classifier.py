@@ -1,16 +1,15 @@
-from llm import classify_paper
+from classifier import classify_paper
 
-question = "Does creatine improve cognition?"
+question = "Creatine improves cognition"
 
 abstract = """
 Creatine supplementation improved memory
-performance and executive function in healthy
-adults compared to placebo.
+performance and executive function in healthy adults.
 """
 
-result = classify_paper(
-    question,
-    abstract
+print(
+    classify_paper(
+        question,
+        abstract
+    )
 )
-
-print(result)
