@@ -90,3 +90,28 @@ tests/                 unit tests (no live PubMed / model downloads)
 
 Never commit `.env`.
 
+<<<<<<< HEAD
+=======
+## Tests
+
+```bash
+pip install pytest
+pytest
+```
+
+Tests mock PubMed and classifiers so they do not download models or hit the network.
+
+## GitHub
+
+This folder is already a git repo. After you review the files:
+
+```bash
+git add .
+git status
+git commit -m "Turn SciLens prototype into a runnable app with CLI, UI, and tests."
+git push origin main
+```
+
+Keep `.env` out of git. If an API key was ever committed, rotate it on the provider dashboard.
+
+>>>>>>> ceb845c (Updated README)
