@@ -1,6 +1,6 @@
 # SciLens
 
-SciLens is an AI-powered literature analysis tool. It does **not** summarize a single paper. It asks: *what does the relevant evidence around this scientific question look like overall?*
+SciLens is a literature analysis tool.  It asks: *what does the relevant evidence around this scientific question look like overall?*
 
 Example question:
 
@@ -15,7 +15,7 @@ SciLens then:
 5. Classifies remaining papers as **Supports**, **Contradicts**, or **Mixed**
 6. Aggregates those labels into a consensus, confidence score, and chart
 
-This is a research prototype, not medical advice and not a systematic review.
+This is a research prototype.
 
 ## Pipeline
 
@@ -90,31 +90,3 @@ tests/                 unit tests (no live PubMed / model downloads)
 
 Never commit `.env`.
 
-## Tests
-
-```bash
-pip install pytest
-pytest
-```
-
-Tests mock PubMed and classifiers so they do not download models or hit the network.
-
-## GitHub
-
-This folder is already a git repo. After you review the files:
-
-```bash
-git add .
-git status
-git commit -m "Turn SciLens prototype into a runnable app with CLI, UI, and tests."
-git push origin main
-```
-
-Keep `.env` out of git. If an API key was ever committed, rotate it on the provider dashboard.
-
-## Limitations
-
-- Abstracts only, not full text
-- PubMed keyword search still returns noisy hits; the similarity filter is what drops them
-- Zero-shot labels can be wrong, especially on methods-heavy or off-angle papers
-- Confidence is an internal score (agreement × relevance × sample size), not a p-value
