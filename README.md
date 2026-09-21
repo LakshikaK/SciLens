@@ -90,7 +90,7 @@ tests/                 unit tests (no live PubMed / model downloads)
 
 Never commit `.env`.
 
-<<<<<<< HEAD
+
 =======
 ## Tests
 
